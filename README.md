@@ -24,8 +24,8 @@ just works everywhere by being consistent across diverse platforms and
 system implementations, that is backward-compatible with existing `libc`
 libraries, minimizes unexpected behavior, is thoroughly tested, focuses on
 correctness, is straightforward, sticks to [C99] and [POSIX][POSIX.1-2017]
-standards, and deepens my understanding of pointers and systems
-programming.
+standards, to review other implementations and deepen my understanding of
+pointers and systems programming.
 
 ## Getting Started
 
@@ -149,6 +149,7 @@ See the [LICENSE](LICENSE) file for details.
 - [glibc/asprintf.c](https://sourceware.org/git/?p=glibc.git;a=blob;f=stdio-common/asprintf.c;h=bb8f4bffc19292c7173d8180b4c2428411d5c269;hb=HEAD)
 - [musl/asprintf.c](https://git.musl-libc.org/cgit/musl/tree/src/stdio/asprintf.c)
 - [newlib/asprintf.c](https://sourceware.org/git/?p=newlib-cygwin.git;a=blob;f=newlib/libc/stdio/asprintf.c;hb=HEAD)
+- [picolibc/asprintf.c](https://github.com/picolibc/picolibc/blob/main/newlib/libc/tinystdio/asprintf.c#L42)
 - [uclibc/asprintf.c](https://gogs.waldemar-brodkorb.de/oss/uclibc-ng/src/master/libc/stdio/asprintf.c)
 
 #### Other `asprintf` implementations
@@ -165,7 +166,6 @@ See the [LICENSE](LICENSE) file for details.
 - [lordmulder/asprintf-msvc](https://github.com/lordmulder/asprintf-msvc/blob/master/asprintf_msvc.c#L35)
 - [n-nino/vc6-asprintf](https://github.com/n-nino/vc6-asprintf/blob/master/asprintf.c)
 - [naev/naev/asprintf](https://github.com/naev/naev/blob/main/utils/model-view-c/nstr.c)
-- [picolibc/asprintf](https://github.com/picolibc/picolibc/blob/main/newlib/libc/tinystdio/asprintf.c#L42)
 - [tap3edit/mp/mpasprintf](https://github.com/tap3edit/mp/blob/master/src/mp.c#L705)
 - [timbaker/asprintf](https://github.com/timbaker/asprintf/blob/master/asprintf.c)
 - [weiss/c99-snprintf](https://github.com/weiss/c99-snprintf/blob/master/snprintf.c#L1528)
