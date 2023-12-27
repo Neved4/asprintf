@@ -1,0 +1,9 @@
+{
+	"name": "asprintf",
+	"version": "1.0.0",
+	"repo": "Neved4/asprintf",
+	"description": "asprintf, vasprintf - print to allocated string",
+	"license": "MIT",
+	"keywords": ["asprintf", "sprintf", "alloc", "string"],
+	"src": ["asprintf.c", "asprintf.h"]
+}
