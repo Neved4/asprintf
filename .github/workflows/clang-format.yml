@@ -1,2 +1,26 @@
-- name: clang-format Check (with custom .clang-format file)
-  uses: mrousavy/clang-format-action@v1
+name: Clang-Format Check
+
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+      - '**/*.clang-format'
+      - '**/*.editorconfig'
+      - '**/*.gitattributes'
+      - '**/*.json'
+      - '**/*.md'
+      - '**/*.yml'
+      - '**/LICENSE'
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  clang-format-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Clang-format Check (with custom .clang-format file)
+        uses: mrousavy/clang-format-action@v1
