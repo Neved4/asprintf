@@ -70,14 +70,14 @@ supports XDG_CONFIG_HOME and fallbacks:
 
 ```c
 char *getconf() {
-	const char *file = "tz.conf",
-		*xdg_config_home = getenv("XDG_CONFIG_HOME"),
-		*home = getenv("HOME");
-	char *config = NULL;
+    const char *file = "tz.conf",
+        *xdg_config_home = getenv("XDG_CONFIG_HOME"),
+        *home = getenv("HOME");
+    char *config = NULL;
 
-	// Path building logic
+    // Path building logic
 
-	return config;
+    return config;
 }
 ```
 
@@ -85,19 +85,19 @@ char *getconf() {
 
 ```c
 if (access("tz.conf", F_OK) != -1) {
-	config = strdup("tz.conf");
+    config = strdup("tz.conf");
 } else if (xdg_config_home) {
-	size_t len = strlen(xdg_config_home) + strlen("twc") + strlen(file) + 3; 
-	config = (char *)malloc(len);
-	if (config != NULL) {
-		snprintf(config, len, "%s/%s/%s", xdg_config_home, "twc", file);
-	}
+    size_t len = strlen(xdg_config_home) + strlen("twc") + strlen(file) + 3; 
+    config = (char *)malloc(len);
+    if (config != NULL) {
+        snprintf(config, len, "%s/%s/%s", xdg_config_home, "twc", file);
+    }
 } else if (home) {
-	size_t len = strlen(home) + strlen(".config/twc") + strlen(file) + 3; 
-	config = (char *)malloc(len);
-	if (config != NULL) {
-		snprintf(config, len, "%s/%s/%s", home, ".config/twc", file);
-	}
+    size_t len = strlen(home) + strlen(".config/twc") + strlen(file) + 3; 
+    config = (char *)malloc(len);
+    if (config != NULL) {
+        snprintf(config, len, "%s/%s/%s", home, ".config/twc", file);
+    }
 }
 ```
 
@@ -105,11 +105,11 @@ if (access("tz.conf", F_OK) != -1) {
 
 ```c
 if (access("tz.conf", F_OK) != -1) {
-	config = strdup("tz.conf");
+    config = strdup("tz.conf");
 } else if (xdg_config_home) {
-	asprintf(&config, "%s/%s/%s", xdg_config_home, "twc", file);
+    asprintf(&config, "%s/%s/%s", xdg_config_home, "twc", file);
 } else if (home) {
-	asprintf(&config, "%s/%s/%s", home, ".config/twc", file);
+    asprintf(&config, "%s/%s/%s", home, ".config/twc", file);
 }
 ```
 
@@ -259,8 +259,8 @@ See the [LICENSE](LICENSE) file for details.
 [ibm.com/docs/zos/asprintf]: https://www.ibm.com/docs/en/zos/3.1.0?topic=functions-asprintf-vasprintf-print-allocated-string
 
 [^1]: _IEEE Std 1003.1-2017: Standard for Information Technology
-	— Portable Operating System Interface (POSIX®)_, \
-	ISO/IEC/IEEE 9945:2009/COR 2:2017. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
+    — Portable Operating System Interface (POSIX®)_, \
+    ISO/IEC/IEEE 9945:2009/COR 2:2017. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
 [^2]: _ISO/IEC 9899: Standard for Information Technology
-	— Programming languages — C_, ISO/IEC 9899:2023. \
-	URL: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf
+    — Programming languages — C_, ISO/IEC 9899:2023. \
+    URL: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf
