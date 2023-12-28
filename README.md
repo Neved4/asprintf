@@ -63,6 +63,56 @@ int asprintf(char **strp, const char *fmt, ...);
 int vasprintf(char **strp, const char *fmt, va_list ap);
 ```
 
+### Examples
+
+Consider a `getconf()` function to retrieve a `config` specified path, that
+supports XDG_CONFIG_HOME and fallbacks:
+
+```c
+char *getconf() {
+	const char *file = "tz.conf",
+		*xdg_config_home = getenv("XDG_CONFIG_HOME"),
+		*home = getenv("HOME");
+	char *config = NULL;
+
+	// Path building logic
+
+	return config;
+}
+```
+
+#### Before
+
+```c
+if (access("tz.conf", F_OK) != -1) {
+	config = strdup("tz.conf");
+} else if (xdg_config_home) {
+	size_t len = strlen(xdg_config_home) + strlen("twc") + strlen(file) + 3; 
+	config = (char *)malloc(len);
+	if (config != NULL) {
+		snprintf(config, len, "%s/%s/%s", xdg_config_home, "twc", file);
+	}
+} else if (home) {
+	size_t len = strlen(home) + strlen(".config/twc") + strlen(file) + 3; 
+	config = (char *)malloc(len);
+	if (config != NULL) {
+		snprintf(config, len, "%s/%s/%s", home, ".config/twc", file);
+	}
+}
+```
+
+#### After
+
+```c
+if (access("tz.conf", F_OK) != -1) {
+	config = strdup("tz.conf");
+} else if (xdg_config_home) {
+	asprintf(&config, "%s/%s/%s", xdg_config_home, "twc", file);
+} else if (home) {
+	asprintf(&config, "%s/%s/%s", home, ".config/twc", file);
+}
+```
+
 ### Testing
 
 To run all the tests against `asprintf` execute the following command:
