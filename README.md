@@ -66,7 +66,7 @@ int vasprintf(char **strp, const char *fmt, va_list ap);
 ### Examples
 
 Consider a `getconf()` function to retrieve a `config` specified path, that
-supports XDG_CONFIG_HOME and fallbacks:
+supports both `XDG_CONFIG_HOME` and fallbacks:
 
 ```c
 char *getconf() {
@@ -81,7 +81,9 @@ char *getconf() {
 }
 ```
 
-#### Before
+After which we'll have to lay down our path building logic:
+
+#### Before `asprintf`
 
 ```c
 if (access("tz.conf", F_OK) != -1) {
@@ -101,7 +103,7 @@ if (access("tz.conf", F_OK) != -1) {
 }
 ```
 
-#### After
+#### After `asprintf`
 
 ```c
 if (access("tz.conf", F_OK) != -1) {
