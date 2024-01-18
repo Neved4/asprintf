@@ -22,5 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check Clang-Foramt
+      - name: Check Clang-Format
         uses: mrousavy/clang-format-action@v1
+        with:
+          clang-format-style-path: .clang-format
