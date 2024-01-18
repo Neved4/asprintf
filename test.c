@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-static int success = 0, failure = 0;
-static char *str = NULL;
 const char
   *reset = "\033[0m",
    *bold = "\033[1m",
@@ -16,6 +14,9 @@ const char
   *green = "\033[32m",
    *blue = "\033[34m",
 *magenta = "\033[35m";
+
+static int success = 0, failure = 0;
+static char *str;
 
 void printc(const char *color, const char *stat, const char *msg) {
 	const char *hl = reset;
@@ -33,6 +34,14 @@ void prints(const char *color, const char *msg, int value) {
 
 	printf("%s%11s%s: %d%s\n", style, msg, reset, value, reset);
 }
+
+#define count(e_size, fmt, ...) ({ \
+	char *str2 = NULL; \
+	int size = asprintf(&str2, fmt, __VA_ARGS__); \
+	assert(str2);	\
+	assert(e_size == size); \
+	free(str2); \
+})
 
 int test(int cond, const char *msg) {
 	str = NULL;
@@ -68,14 +77,6 @@ void results() {
 
 	prints(green, "Total", success + failure);
 }
-
-#define count(e_size, fmt, ...) ({ \
-  char *str2 = NULL; \
-  int size = asprintf(&str2, fmt, __VA_ARGS__); \
-  assert(str2);	\
-  assert(e_size == size); \
-  free(str2); \
-})
 
 int main(int argc, char *argv[]) {
 	int res, max, flag = 0;
@@ -231,9 +232,9 @@ int main(int argc, char *argv[]) {
 		"Quoted strings with different escape characters");
 
 	// 29.
-	int chars_written = 0;
-	res = asprintf(&str, "Chars written: %n", &chars_written);
-	test(res > 0 && chars_written == res,
+	int chars = 0;
+	res = asprintf(&str, "Chars written: %n", &chars);
+	test(res > 0 && chars == res,
 		"Using %n to get the number of characters written");
 
 	// 30.
