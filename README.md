@@ -10,8 +10,8 @@ Thoroughly tested.
 ## Highlights
 
 - 🚀 _**Fast**_ - performance akin other implementations
-- 📦 _**Simple**_ - zero dependencies, lighweight
-  (`35 lines`, `573 bytes`) and ISO [C99] compatible.
+- 📦 _**Simple**_ - zero dependencies, lightweight
+  (`37 lines`, `574 bytes`) and ISO [C99] compatible.
 - 🔒 _**Robust**_ - safety-first, with substantial [unit testing](test.c).
 - ⚙️ _**Compatible**_ - interop across different systems, drop-in
   replacement for `asprintf` and `vasprintf` as in [glibc], *BSD libc,
@@ -70,9 +70,8 @@ supports both `XDG_CONFIG_HOME` and fallbacks:
 
 ```c
 char *getconf() {
-    const char *file = "tz.conf",
-        *xdg_config_home = getenv("XDG_CONFIG_HOME"),
-        *home = getenv("HOME");
+    const char *file = "tz.conf", *home = getenv("HOME"),
+        *xdg_config_home = getenv("XDG_CONFIG_HOME");
     char *config = NULL;
 
     // Path building logic
@@ -161,7 +160,7 @@ Runs on _**Linux**_, _**macOS**_ and _**\*BSD**_ systems on both [`x86_64`]
 and [`arm64`]. Builds with [`clang`], [`gcc`], [`tcc`], [`zig`] and any
 other compiler that supports [C99] or later.
 
-Should be compatible with glibc, FreeBSD libc, musl libc `asprintf`.
+Should be compatible with [glibc], [GLib], FreeBSD libc, musl libc `asprintf`.
 
 ## Standards
 
@@ -243,6 +242,7 @@ See the [LICENSE](LICENSE) file for details.
 [MIT License]: https://opensource.org/license/mit/
 [clib]: https://github.com/clibs/clib
 [Docker]: https://www.docker.com/
+[GLib]: https://docs.gtk.org/glib/index.html
 [glibc]: https://www.gnu.org/software/libc/
 [musl libc]: https://musl.libc.org/
 
