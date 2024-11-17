@@ -193,6 +193,7 @@ See the [LICENSE](LICENSE) file for details.
 |  [NetBSD `asprintf`] | [man.netbsd.org/asprintf.3]    |
 |   Solaris `asprintf` | [docs.oracle.com/asprintf-3c]  |
 |      z/OS `asprintf` | [ibm.com/docs/zos/asprintf]    |
+|  [sortix `asprintf`] |                                |
 
 #### Other `libc` implementations
 
@@ -251,6 +252,7 @@ See the [LICENSE](LICENSE) file for details.
 [FreeBSD `asprintf`]: https://github.com/lattera/freebsd/blob/master/lib/libc/stdio/asprintf.c#L46
 [OpenBSD `asprintf`]: https://github.com/openbsd/src/blob/434871b630fbbd06e39f45c13bc9e199cfd986ee/lib/libc/stdio/asprintf.c#L30
 [NetBSD `asprintf`]: https://github.com/IIJ-NetBSD/netbsd-src/blob/master/lib/libc/stdio/vasprintf.c
+[sortix `asprintf`]: https://gitlab.com/sortix/sortix/-/commit/2fe13d33c9e1da46aa444367f16680cafa3a63a3
 <!-- [Solaris `asprintf`]: -->
 <!-- [z/OS `asprintf`]: -->
 
