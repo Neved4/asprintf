@@ -19,14 +19,14 @@ To have a version of `asprintf` that is simple, robust and reliable that
 just works everywhere by being consistent across diverse platforms and
 system implementations, that is backward-compatible with existing `libc`
 libraries, minimizes unexpected behavior, is thoroughly tested, focuses on
-correctness, is straightforward, sticks to [C99] and [POSIX][POSIX.1-2017]
+correctness, is straightforward, sticks to [C99] and [POSIX.1-2024][POSIX.1]
 standards, to review other implementations and deepen my understanding of
 pointers and systems programming.
 
 ## Getting Started
 
 > [!IMPORTANT]  
-> `asprintf()` and `vasprintf()` are now included in [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html), following [Austin Group Bug #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the latest version [here](https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html). For systems supporting `POSIX.1-2024` or later, `Neved4/asprintf` is no longer necessary. For systems limited to `POSIX.1-2017` or under, it offers a practical solution.
+> `asprintf()` and `vasprintf()` are now included in [POSIX.1-2024][posix-2024-announced], following [Austin Group Bug #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the latest version at [posix-asprintf]. For systems supporting `POSIX.1-2024` or later, `Neved4/asprintf` is no longer necessary. For systems limited to `POSIX.1-2017` or under, it offers a practical solution.
 
 ### Prerequisites
 
@@ -165,7 +165,7 @@ Should be compatible with [glibc], [GLib], FreeBSD libc, musl libc `asprintf`.
 
 ## Standards
 
-`asprintf` is compatible with both [POSIX.1-2024],[^1] and [C99].[^2]
+`asprintf` is compatible with both [POSIX.1-2024][POSIX.1],[^1] and [C99].[^2]
 
 ## License
 
@@ -178,7 +178,7 @@ See the [LICENSE](LICENSE) file for details.
 #### Standards
 
 - [ISO/IEC 9899][C99]
-- [ISO/IEC/IEEE 9945][POSIX.1-2017]
+- [ISO/IEC DIS 9945][POSIX.1]
 - [ISO/IEC TS 17961:2013](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1579.pdf)
 - [MISRA C:2012](https://electrovolt.ir/wp-content/uploads/2022/09/MISRA-C_2012_-Guidelines-for-the-Use-of-the-C-Language-in-Critical-Systems-Motor-Industry-Research-Association-2013-2013.pdf)
 - [SEI CERT C](https://wiki.sei.cmu.edu/confluence/display/c) [.pdf](https://resources.sei.cmu.edu/downloads/secure-coding/assets/sei-cert-c-coding-standard-2016-v01.pdf)
@@ -240,7 +240,9 @@ See the [LICENSE](LICENSE) file for details.
 [`zig`]: https://ziglang.org/
 
 [C99]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf
-[POSIX.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/
+[POSIX.1]: https://pubs.opengroup.org/onlinepubs/9699919799/
+[posix-asprintf]: https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html
+[posix-2024-announced]: https://ieeexplore.ieee.org/document/10555529
 [MIT License]: https://opensource.org/license/mit/
 [clib]: https://github.com/clibs/clib
 [Docker]: https://www.docker.com/
