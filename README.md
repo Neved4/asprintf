@@ -1,7 +1,3 @@
-[![C](https://img.shields.io/badge/ISO_C99-A8B9CC?logo=c&logoColor=fff)][C99]
-![IEEE](https://img.shields.io/badge/POSIX.1&#8209;2017-00629B?logo=ieee&logoColor=fff)
-[![CodeQL](https://github.com/github/docs/actions/workflows/codeql.yml/badge.svg)](https://github.com/Neved4/twc/actions/workflows/codeql.yml)
-
 # `asprintf` - One True `asprintf`, `vasprintf`! 🛠️
 
 Robust, portable implementation of `asprintf()`, `vasprintf()`.
@@ -28,6 +24,9 @@ standards, to review other implementations and deepen my understanding of
 pointers and systems programming.
 
 ## Getting Started
+
+> [!IMPORTANT]  
+> `asprintf()` and `vasprintf()` are now included in [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html), following [Austin Group Bug #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the latest version [here](https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html). For systems supporting `POSIX.1-2024` or later, `Neved4/asprintf` is no longer necessary. For systems limited to `POSIX.1-2017` or under, it offers a practical solution.
 
 ### Setup
 
@@ -164,7 +163,7 @@ Should be compatible with [glibc], [GLib], FreeBSD libc, musl libc `asprintf`.
 
 ## Standards
 
-`asprintf` is compatible with both [POSIX.1-2017],[^1] and [C99].[^2]
+`asprintf` is compatible with both [POSIX.1-2024],[^1] and [C99].[^2]
 
 ## License
 
@@ -260,9 +259,9 @@ See the [LICENSE](LICENSE) file for details.
 [docs.oracle.com/asprintf-3c]: https://docs.oracle.com/cd/E88353_01/html/E37843/asprintf-3c.html
 [ibm.com/docs/zos/asprintf]: https://www.ibm.com/docs/en/zos/3.1.0?topic=functions-asprintf-vasprintf-print-allocated-string
 
-[^1]: _IEEE Std 1003.1-2017: Standard for Information Technology
+[^1]: _IEEE Std 1003.1-2024: Standard for Information Technology
     — Portable Operating System Interface (POSIX®)_, \
-    ISO/IEC/IEEE 9945:2009/COR 2:2017. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
+    ISO/IEC DIS 9945. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
 [^2]: _ISO/IEC 9899: Standard for Information Technology
     — Programming languages — C_, ISO/IEC 9899:2023. \
     URL: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf
