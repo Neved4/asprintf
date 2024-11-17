@@ -15,20 +15,31 @@ Thoroughly tested.
 
 ## Motivation
 
-To have a version of `asprintf` that is simple, robust and reliable that
-just works everywhere by being consistent across diverse platforms and
-system implementations, that is backward-compatible with existing `libc`
-libraries, minimizes unexpected behavior, is thoroughly tested, focuses on
-correctness, is straightforward, sticks to [C99] and [POSIX.1-2024][POSIX.1]
-standards, to review other implementations and deepen my understanding of
-pointers and systems programming.
+Wanted to have a version of `asprintf` that is simple, robust and just works
+everywhere. Needed it to be backward-compatible with existing `libc` libraries,
+consistent across diverse platforms and systems. It should also focus on
+correctness, minimize unexpected behavior, be thoroughly tested, be easy to read
+and stick to both [C99] and [POSIX.1-2024][POSIX.1].
+
+This process also gave me the opportunity to review
+existing implementations and deepen my understanding of pointers and systems
+programming.
 
 ## Getting Started
 
 > [!IMPORTANT]  
-> `asprintf()` and `vasprintf()` are now included in [POSIX.1-2024][posix-2024-announced], following [Austin Group Bug #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the latest version at [posix-asprintf]. For systems supporting `POSIX.1-2024` or later, `Neved4/asprintf` is no longer necessary. For systems limited to `POSIX.1-2017` or under, it offers a practical solution.
+> `asprintf()` and `vasprintf()` are now included in
+> [POSIX.1-2024][posix-2024-announced], following [Austin Group Bug
+> #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the
+> latest version at [posix-asprintf]. For systems supporting `POSIX.1-2024` or
+> later, `Neved4/asprintf` is no longer necessary. For systems limited to
+> `POSIX.1-2017` or under, it offers a practical solution.
 
 ### Prerequisites
+
+If you are building [`asprintf`], ensure you have:
+
+- A [C] compiler that supports [C99]
 
 ### Installing
 
@@ -81,9 +92,9 @@ char *getconf() {
 }
 ```
 
-After which we'll have to lay down our path building logic:
+After which we'll have to lay down our path building logic.
 
-#### Before `asprintf`
+###### Before `asprintf`
 
 ```c
 if (access("tz.conf", F_OK) != -1) {
@@ -103,7 +114,7 @@ if (access("tz.conf", F_OK) != -1) {
 }
 ```
 
-#### After `asprintf`
+###### After `asprintf`
 
 ```c
 if (access("tz.conf", F_OK) != -1) {
@@ -239,6 +250,7 @@ See the [LICENSE](LICENSE) file for details.
 [`tcc`]: https://bellard.org/tcc/
 [`zig`]: https://ziglang.org/
 
+[C]: https://en.wikipedia.org/wiki/C_(programming_language)
 [C99]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf
 [POSIX.1]: https://pubs.opengroup.org/onlinepubs/9699919799/
 [posix-asprintf]: https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html
