@@ -28,7 +28,9 @@ pointers and systems programming.
 > [!IMPORTANT]  
 > `asprintf()` and `vasprintf()` are now included in [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html), following [Austin Group Bug #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the latest version [here](https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html). For systems supporting `POSIX.1-2024` or later, `Neved4/asprintf` is no longer necessary. For systems limited to `POSIX.1-2017` or under, it offers a practical solution.
 
-### Setup
+### Prerequisites
+
+### Installing
 
 If you have [clib] installed, run:
 ```console
