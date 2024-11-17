@@ -100,13 +100,13 @@ After which we'll have to lay down our path building logic.
 if (access("tz.conf", F_OK) != -1) {
     config = strdup("tz.conf");
 } else if (xdg_config_home) {
-    size_t len = strlen(xdg_config_home) + strlen("twc") + strlen(file) + 3; 
+    size_t len = strlen(xdg_config_home) + strlen("twc") + strlen(file) + 3;
     config = (char *)malloc(len);
     if (config != NULL) {
         snprintf(config, len, "%s/%s/%s", xdg_config_home, "twc", file);
     }
 } else if (home) {
-    size_t len = strlen(home) + strlen(".config/twc") + strlen(file) + 3; 
+    size_t len = strlen(home) + strlen(".config/twc") + strlen(file) + 3;
     config = (char *)malloc(len);
     if (config != NULL) {
         snprintf(config, len, "%s/%s/%s", home, ".config/twc", file);
@@ -252,7 +252,7 @@ See the [LICENSE](LICENSE) file for details.
 
 [C]: https://en.wikipedia.org/wiki/C_(programming_language)
 [C99]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf
-[POSIX.1]: https://pubs.opengroup.org/onlinepubs/9699919799/
+[POSIX.1]: https://pubs.opengroup.org/onlinepubs/9799919799/
 [posix-asprintf]: https://pubs.opengroup.org/onlinepubs/9799919799/functions/asprintf.html
 [posix-2024-announced]: https://ieeexplore.ieee.org/document/10555529
 [MIT License]: https://opensource.org/license/mit/
@@ -279,7 +279,7 @@ See the [LICENSE](LICENSE) file for details.
 
 [^1]: _IEEE Std 1003.1-2024: Standard for Information Technology
     — Portable Operating System Interface (POSIX®)_, \
-    ISO/IEC DIS 9945. URL: https://pubs.opengroup.org/onlinepubs/9699919799/
+    ISO/IEC DIS 9945. URL: https://pubs.opengroup.org/onlinepubs/9799919799/
 [^2]: _ISO/IEC 9899: Standard for Information Technology
     — Programming languages — C_, ISO/IEC 9899:2023. \
     URL: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf
