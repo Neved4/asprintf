@@ -7,7 +7,7 @@ Thoroughly tested.
 
 - 🚀 _**Fast**_ - performance akin other implementations
 - 📦 _**Simple**_ - zero dependencies, lightweight
-  (`37 lines`, `574 bytes`) and ISO [C99] compatible.
+  (`37 lines`, `566 bytes`) and ISO [C99] compatible.
 - 🔒 _**Robust**_ - safety-first, with substantial [unit testing](test.c).
 - ⚙️ _**Compatible**_ - interop across different systems, drop-in
   replacement for `asprintf` and `vasprintf` as in [glibc], *BSD libc,
