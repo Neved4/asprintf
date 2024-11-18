@@ -9,9 +9,8 @@ Thoroughly tested.
 - 📦 _**Simple**_ - zero dependencies, lightweight
   (`37 lines`, `566 bytes`) and ISO [C99] compatible.
 - 🔒 _**Robust**_ - safety-first, with substantial [unit testing](test.c).
-- ⚙️ _**Compatible**_ - interop across different systems, drop-in
-  replacement for `asprintf` and `vasprintf` as in [glibc], *BSD libc,
-  [musl libc] and many more.
+- ⚙️ _**Compatible**_ - interop across different systems, drop-in `asprintf`, `vasprintf` replacement for [glibc], [*BSD libc][OpenBSD `asprintf`],
+  [musl libc] and [many more](#see-also).
 
 ## Motivation
 
@@ -186,7 +185,7 @@ See the [LICENSE](LICENSE) file for details.
 
 ## See Also
 
-#### Standards
+#### Reference
 
 - [ISO/IEC 9899][C99]
 - [ISO/IEC DIS 9945][POSIX.1-2024]
