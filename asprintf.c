@@ -16,7 +16,7 @@ int vasprintf(char **strp, const char *fmt, va_list ap) {
 	if (size < 0)
 		return -1;
 
-	*strp = (char *)malloc(size + 1);
+	*strp = malloc(size + 1);
 	if (*strp == NULL)
 		return -1;
 
