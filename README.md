@@ -20,9 +20,8 @@ consistent across diverse platforms and systems. It should also focus on
 correctness, minimize unexpected behavior, be thoroughly tested, be easy to read
 and stick to both [C99] and [POSIX.1-2024].
 
-This process also gave me the opportunity to review
-existing implementations and deepen my understanding of pointers and systems
-programming.
+This process also gave me the opportunity to review existing implementations and
+deepen my understanding of pointers and systems programming.
 
 ## Getting Started
 
