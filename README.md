@@ -216,6 +216,7 @@ See the [LICENSE](LICENSE) file for details.
 
 #### Other `asprintf` implementations
 
+- [gcc/libiberty/asprintf.c](https://github.com/gcc-mirror/gcc/blob/master/libiberty/asprintf.c#L47)
 - [akharrou/ft_asprintf](https://github.com/akharrou/42-Project-Ft_Printf/blob/master/ft_asprintf.c)
 - [andrelmbackman/ft_printf](https://github.com/andrelmbackman/ft_printf)
 - [d4wae89d498/ft_asprintf](https://github.com/d4wae89d498/libftprintf/blob/master/ft_asprintf.c)
