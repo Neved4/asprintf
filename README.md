@@ -25,7 +25,7 @@ deepen my understanding of pointers and systems programming.
 
 ## Getting Started
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > `asprintf()` and `vasprintf()` are now included in
 > [POSIX.1-2024][posix-2024-announced], following [Austin Group Bug
 > #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the
@@ -190,7 +190,7 @@ See the [LICENSE](LICENSE) file for details.
 - [ISO/IEC DIS 9945][POSIX.1-2024]
 - [ISO/IEC TS 17961:2013](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1579.pdf)
 - [MISRA C:2012](https://electrovolt.ir/wp-content/uploads/2022/09/MISRA-C_2012_-Guidelines-for-the-Use-of-the-C-Language-in-Critical-Systems-Motor-Industry-Research-Association-2013-2013.pdf)
-- [SEI CERT C](https://wiki.sei.cmu.edu/confluence/display/c) [.pdf](https://resources.sei.cmu.edu/downloads/secure-coding/assets/sei-cert-c-coding-standard-2016-v01.pdf)
+- [SEI CERT C](https://wiki.sei.cmu.edu/confluence/display/c) ([PDF](https://resources.sei.cmu.edu/downloads/secure-coding/assets/sei-cert-c-coding-standard-2016-v01.pdf))
 
 #### System implementations
 
