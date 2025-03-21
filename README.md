@@ -26,12 +26,12 @@ deepen my understanding of pointers and systems programming.
 ## Getting Started
 
 > [!IMPORTANT]
-> `asprintf()` and `vasprintf()` are now included in
-> [POSIX.1-2024][posix-2024-announced], following [Austin Group Bug
-> #1496](https://www.austingroupbugs.net/view.php?id=1496). You can read the
-> latest version at [posix-asprintf]. For systems supporting `POSIX.1-2024` or
-> later, `Neved4/asprintf` is no longer necessary. For systems limited to
-> `POSIX.1-2017` or under, it offers a practical solution.
+> Both `asprintf()` and `vasprintf()` are now included in
+> [POSIX.1-2024][posix-2024-announced], see [Austin Group Bug
+> #1496](https://www.austingroupbugs.net/view.php?id=1496). You can check the
+> current specification [here][posix-asprintf]. For systems supporting
+> `POSIX.1-2024` or later, `Neved4/asprintf` is no longer necessary. For systems
+> limited to `POSIX.1-2017` or under, it offers a practical solution.
 
 ### Prerequisites
 
