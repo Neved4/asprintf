@@ -1,3 +1,8 @@
+[![C](https://img.shields.io/badge/ISO_C99-A8B9CC?logo=c&logoColor=fff)][C99]
+[![IEEE](https://img.shields.io/badge/POSIX.1&#8209;2024-00629B?logo=ieee&logoColor=fff)][POSIX.1-2024]
+[![CodeQL](https://github.com/github/docs/actions/workflows/codeql.yml/badge.svg)](https://github.com/Neved4/twc/actions/workflows/codeql.yml)
+[![clib](https://img.shields.io/badge/clib-pkg-2AAB47?logo=github&logoColor=959DA5&labelColor=2B3137)](https://github.com/Neved4/homebrew-tap/blob/main/Formula/gotwc.rb)
+
 # `asprintf` - One True `asprintf`, `vasprintf`! 🛠️
 
 Robust, portable implementation of `asprintf()`, `vasprintf()`.
